@@ -8,6 +8,7 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { ModeToggle } from '@/components/mode-toggle';
+import { MobileSidebar } from '@/components/mobile-sidebar';
 
 const font = Poppins({
   weight: '600',
@@ -16,9 +17,9 @@ const font = Poppins({
 
 const Navbar = () => {
   return (
-    <div className="fixed z-50 flex items-center justify-between w-full px-4 py-2 border-b border-primary/10 bg-secondary">
+    <div className="fixed z-50 flex items-center justify-between w-full h-16 px-4 py-2 border-b border-primary/10 bg-secondary">
       <div className="flex items-center">
-        <Menu className="block md:hidden" />
+        <MobileSidebar />
         <Link href="/">
           <h1
             className={cn(
