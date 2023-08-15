@@ -9,8 +9,8 @@ export type CompanionKey = {
   userId: string;
 };
 
-export class MemoeyManager {
-  private static instance: MemoeyManager;
+export class MemoryManager {
+  private static instance: MemoryManager;
   private history: Redis;
   private vectorDBClient: PineconeClient;
 
@@ -54,12 +54,12 @@ export class MemoeyManager {
     return similarDocs;
   }
 
-  public static async getInstance(): Promise<MemoeyManager> {
-    if (!MemoeyManager.instance) {
-      MemoeyManager.instance = new MemoeyManager();
-      await MemoeyManager.instance.init();
+  public static async getInstance(): Promise<MemoryManager> {
+    if (!MemoryManager.instance) {
+      MemoryManager.instance = new MemoryManager();
+      await MemoryManager.instance.init();
     }
-    return MemoeyManager.instance;
+    return MemoryManager.instance;
   }
 
   private generateRedisCompanionKey(companionKey: CompanionKey): string {
