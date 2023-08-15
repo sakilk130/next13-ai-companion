@@ -166,7 +166,7 @@ const CompanionForm: FC<CompanionFormProps> = ({ categories, initialData }) => {
               control={form.control}
               render={({ field }) => (
                 <FormItem className="col-span-2 md:col-span-1">
-                  <FormLabel>Name</FormLabel>
+                  <FormLabel>Description</FormLabel>
                   <FormControl>
                     <Input
                       disabled={isLoading}
