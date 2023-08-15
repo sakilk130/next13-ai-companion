@@ -7,6 +7,7 @@ import { useRouter } from 'next/navigation';
 
 import { ChatHeader } from '@/components/chat-header';
 import { ChatForm } from '@/components/chat-form';
+import { ChatMessages } from '@/components/chat-messages';
 
 interface ChatClientProps {
   companion: Companion & {
@@ -46,7 +47,11 @@ const ChatClient: FC<ChatClientProps> = ({ companion }) => {
   return (
     <div className="flex flex-col h-full p-4 space-y-2">
       <ChatHeader companion={companion} />
-      <div>MESSAGES</div>
+      <ChatMessages
+        companion={companion}
+        isLoading={isLoading}
+        messages={messages}
+      />
       <ChatForm
         isLoading={isLoading}
         input={input}
