@@ -26,7 +26,7 @@ const Companions: FC<CompanionsProps> = ({ data }) => {
     );
   }
   return (
-    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
+    <div className="grid grid-cols-2 gap-2 pb-10 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
       {data.map((companion) => (
         <Card
           key={companion.id}
