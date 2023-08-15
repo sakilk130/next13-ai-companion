@@ -43,6 +43,7 @@ const ChatHeader: FC<ChatHeaderProps> = ({ companion }) => {
       toast({
         description: 'Success',
       });
+      router.refresh();
     } catch (error) {
       toast({
         description: 'Something went wrong',
