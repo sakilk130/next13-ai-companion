@@ -22,7 +22,7 @@ model Companion{
   instructions String @db.Text
   seed String @db.Text
   categoryId String
-  message Message[]
+  messages Message[]
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
